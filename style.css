@@ -1,0 +1,16 @@
+.header {
+  color: blue;
+  font-size: 24px;
+}
+
+.bio {
+  font-family: 'Cabin', sans-serif;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+h3, li {
+  font-family: 'Cabin', sans-serif;
+}
