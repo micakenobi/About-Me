@@ -150,4 +150,4 @@ function guessFood(foodArr) {
 }
 guessFood(arrayFood);
 
-alert (answerUserName + ' you got ' + counter + ' out of two.');
+alert (answerUserName + ' you got ' + counter + ' out of six.');
