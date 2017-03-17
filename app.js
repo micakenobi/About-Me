@@ -3,40 +3,40 @@ function functionButton() {
   alert('Time to Play!');
 
   var counter = 0;
-  var question1 = 'What is your name?';
-  var question2 = 'Do you also like to travel?';
-  var question3 = 'Do you like to eat dessert?';
-  var question4 = 'Do you like running?';
-  var question5 = 'Do you like puppies?';
-  var question2NegativeResponse = 'You are dull...';
-  var question3NegativeResponse = 'Live a little...';
-  var question4NegativeResponse = 'Shucks...';
-  var question5NegativeResponse = 'Don\'t tell me you like cats...';
-  var question2PositiveResponse = 'Let\'s plan a trip!';
-  var question3PositiveResponse = 'Ready for cake!';
-  var question4PositiveResponse = 'Grab your sneakers!';
-  var question5PositiveResponse = 'Puppy time!';
+  var nameQuestion = 'What is your name?';
+  var travelQuestion = 'Do I like to travel?';
+  var dessertQuestion = 'Do I like to eat dessert?';
+  var runQuestion = 'Do I like running?';
+  var puppyQuestion = 'Do I like puppies?';
+  var travelQuestionNegativeResponse = 'Incorrect, I love to travel.';
+  var dessertQuestionNegativeResponse = 'Incorrect, I love dessert.';
+  var runQuestionNegativeResponse = 'Incorrect, I love running.';
+  var puppyQuestionNegativeResponse = 'Incorrect, I love puppies.';
+  var travelQuestionPositiveResponse = 'Correct, let\'s plan a trip!';
+  var dessertQuestionPositiveResponse = 'Correct, ready for cake!';
+  var runQuestionPositiveResponse = 'Correct, grab your sneakers!';
+  var puppyQuestionPositiveResponse = 'Correct, puppy time!';
   var invalidInput = 'You didn\'t put a proper answer. Try "yes", "y", "no", or "n".';
 
-  var questions = [question2, question3, question4, question5];
-  var positiveResponse = [question2PositiveResponse, question3PositiveResponse, question4PositiveResponse, question5PositiveResponse];
-  var negativeResponse = [question2NegativeResponse, question3NegativeResponse, question4NegativeResponse, question5NegativeResponse];
+  var questions = [travelQuestion, dessertQuestion, runQuestion, puppyQuestion];
+  var positiveResponses = [travelQuestionPositiveResponse, dessertQuestionPositiveResponse, runQuestionPositiveResponse, puppyQuestionPositiveResponse];
+  var negativeResponses = [travelQuestionNegativeResponse, dessertQuestionNegativeResponse, runQuestionNegativeResponse, puppyQuestionNegativeResponse];
 
-  var answerUserName = prompt(question1);
-  console.log(question1 + ': ' + answerUserName);
+  var answerUserName = prompt(nameQuestion);
+  console.log(nameQuestion + ': ' + answerUserName);
   var response1 = 'Well hello there, ' + answerUserName;
   alert(response1);
 
-  function questionForLoop(){
+  function askUserQuestions(){
     for (var i = 0; i < questions.length; i++){
       while (true) {
         var answer = prompt(questions[i]);
         if (answer.toLowerCase() === 'yes' || answer.toLowerCase() === 'y'){
-          alert (positiveResponse[i]);
+          alert (positiveResponses[i]);
           counter++;
           break;
         } else if (answer.toLowerCase() === 'no' || answer.toLowerCase() === 'n') {
-          alert (negativeResponse[i]);
+          alert (negativeResponses[i]);
           break;
         } else {
           alert(invalidInput);
@@ -45,7 +45,7 @@ function functionButton() {
     }
   }
 
-  questionForLoop();
+  askUserQuestions();
 
   var questionCoffee = 'How many cups of coffee do I drink per day?';
   var solution = 2;
